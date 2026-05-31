@@ -10,6 +10,7 @@ Copy `.env.example` to `.env` locally or configure the same keys in your hosting
 | --- | --- |
 | `NODE_ENV=production` | Enables production checks and strict runtime behavior. |
 | `DATABASE_URL` | Postgres connection string used by Payload. |
+| `DATABASE_POOL_MAX` | Maximum Postgres connections per app instance. Defaults to `1` in production and `5` locally. Use `1` on Vercel/serverless. |
 | `DATABASE_SSL` | Use `true` for Supabase/managed Postgres. Use `false` for local Docker Postgres. |
 | `DATABASE_SSL_REJECT_UNAUTHORIZED` | Keep `true` for managed Postgres with valid certificates. Use `false` only for a known self-signed chain. |
 | `PAYLOAD_SECRET` | Long random secret for Payload auth/session encryption. |
@@ -31,7 +32,15 @@ Copy `.env.example` to `.env` locally or configure the same keys in your hosting
 
 Production intentionally fails fast if required database, secret, email, or S3 values are missing.
 
-For Supabase and Vercel, set `DATABASE_SSL=true`.
+For Supabase and Vercel, use the Supabase **Transaction pooler** connection string for `DATABASE_URL`, not Direct connection or Session pooler. Also set:
+
+```env
+DATABASE_POOL_MAX=1
+DATABASE_SSL=true
+DATABASE_SSL_REJECT_UNAUTHORIZED=false
+```
+
+The Transaction pooler is required for serverless deployments because every Vercel function instance can create its own Postgres pool. Direct/session connections can quickly hit Supabase's `max clients reached` limit.
 
 `NEXT_PUBLIC_SERVER_URL` is also used at build time for browser-visible URLs and image configuration. When building a Docker image for a real domain, pass the final HTTPS URL as a build argument or configure it as a build variable in the hosting platform.
 
@@ -85,6 +94,7 @@ For local development:
 ```env
 NODE_ENV=development
 DATABASE_URL=postgres://postgres:postgres@127.0.0.1:5432/ecommerce-starter
+DATABASE_POOL_MAX=5
 DATABASE_SSL=false
 DATABASE_SSL_REJECT_UNAUTHORIZED=false
 PAYLOAD_SECRET=local-dev-secret

@@ -52,7 +52,7 @@ export default buildConfig({
   db: postgresAdapter({
     pool: {
       connectionString: env.databaseURL,
-      max: 5,
+      max: env.databasePoolMax,
       ssl: env.databaseSSLEnabled
         ? { rejectUnauthorized: env.databaseSSLRejectUnauthorized }
         : false,

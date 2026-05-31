@@ -4,6 +4,22 @@ const productionRuntime = production && !productionBuild
 
 export const envValue = (name: string) => process.env[name]?.trim()
 
+const parsePositiveInteger = (name: string, defaultValue: number) => {
+  const value = envValue(name)
+
+  if (!value) {
+    return defaultValue
+  }
+
+  const parsed = Number.parseInt(value, 10)
+
+  if (!Number.isFinite(parsed) || parsed < 1) {
+    throw new Error(`${name} must be a positive integer.`)
+  }
+
+  return parsed
+}
+
 const requiredInProduction = (name: string) => {
   const value = envValue(name)
 
@@ -38,6 +54,7 @@ const requiredForProvider = (provider: PaymentProvider, name: string) => {
 }
 
 export const env = {
+  databasePoolMax: parsePositiveInteger('DATABASE_POOL_MAX', productionRuntime ? 1 : 5),
   databaseURL: requiredInProduction('DATABASE_URL') || '',
   databaseSSLEnabled: envValue('DATABASE_SSL') === 'true' || productionRuntime,
   databaseSSLRejectUnauthorized: envValue('DATABASE_SSL_REJECT_UNAUTHORIZED') !== 'false',
