@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" role="img" aria-label="Three item grid preview">
+  <rect width="480" height="320" fill="#f7f7f8"/>
+  <rect x="38" y="66" width="126" height="174" rx="20" fill="#111"/>
+  <rect x="178" y="66" width="126" height="174" rx="20" fill="#eceef1"/>
+  <rect x="318" y="66" width="126" height="174" rx="20" fill="#d9dde2"/>
+  <circle cx="101" cy="136" r="32" fill="#fff"/>
+  <circle cx="241" cy="136" r="32" fill="#111"/>
+  <circle cx="381" cy="136" r="32" fill="#111"/>
+  <rect x="65" y="202" width="72" height="10" rx="5" fill="#fff"/>
+  <rect x="205" y="202" width="72" height="10" rx="5" fill="#111"/>
+  <rect x="345" y="202" width="72" height="10" rx="5" fill="#111"/>
+</svg>

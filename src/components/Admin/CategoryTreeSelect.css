@@ -1,0 +1,109 @@
+.category-tree-select {
+  margin-bottom: var(--base);
+}
+
+.category-tree-select__label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.category-tree-select__panel {
+  background: var(--theme-input-bg);
+  border: 1px solid var(--theme-elevation-150);
+  border-radius: 6px;
+  max-height: 360px;
+  overflow: auto;
+  padding: 8px;
+}
+
+.category-tree-select__toolbar {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.category-tree-select__hint {
+  color: var(--theme-elevation-600);
+  font-size: 12px;
+  line-height: 1.45;
+  margin-bottom: 8px;
+}
+
+.category-tree-select__search {
+  background: var(--theme-input-bg);
+  border: 1px solid var(--theme-elevation-150);
+  border-radius: 4px;
+  color: var(--theme-text);
+  min-height: 38px;
+  padding: 8px 10px;
+  width: 100%;
+}
+
+.category-tree-select__row {
+  align-items: center;
+  border-radius: 5px;
+  display: flex;
+  gap: 8px;
+  min-height: 34px;
+  padding: 4px 6px;
+}
+
+.category-tree-select__row:hover {
+  background: var(--theme-elevation-50);
+}
+
+.category-tree-select__toggle,
+.category-tree-select__spacer {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  color: var(--theme-elevation-650);
+  display: inline-flex;
+  flex: 0 0 24px;
+  height: 24px;
+  justify-content: center;
+  padding: 0;
+  width: 24px;
+}
+
+.category-tree-select__toggle {
+  cursor: pointer;
+  transition: transform 160ms ease;
+}
+
+.category-tree-select__toggle[data-open='true'] {
+  transform: rotate(90deg);
+}
+
+.category-tree-select__checkbox {
+  flex: 0 0 auto;
+}
+
+.category-tree-select__title {
+  color: var(--theme-text);
+  cursor: pointer;
+  flex: 1;
+}
+
+.category-tree-select__title--disabled {
+  color: var(--theme-elevation-500);
+  cursor: default;
+}
+
+.category-tree-select__selected {
+  color: var(--theme-elevation-600);
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.category-tree-select__empty {
+  color: var(--theme-elevation-550);
+  padding: 12px;
+}
+
+.category-tree-select--error .category-tree-select__panel {
+  border-color: var(--theme-error-500);
+}

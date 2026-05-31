@@ -1,0 +1,27 @@
+'use client'
+
+import React from 'react'
+import { useAddresses } from '@payloadcms/plugin-ecommerce/client/react'
+import { AddressItem } from '@/components/addresses/AddressItem'
+import { useDictionary } from '@/i18n/client'
+
+export const AddressListing: React.FC = () => {
+  const { addresses } = useAddresses()
+  const dictionary = useDictionary()
+
+  if (!addresses || addresses.length === 0) {
+    return <p>{dictionary.address.noAddresses}</p>
+  }
+
+  return (
+    <div>
+      <ul className="flex flex-col gap-8">
+        {addresses.map((address) => (
+          <li key={address.id} className="border-b pb-8 last:border-none">
+            <AddressItem address={address} />
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}

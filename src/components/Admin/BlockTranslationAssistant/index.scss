@@ -1,0 +1,56 @@
+.block-translation-assistant {
+  align-items: center;
+  background: var(--theme-elevation-50);
+  border: 1px solid var(--theme-elevation-150);
+  border-radius: 6px;
+  display: inline-flex;
+  gap: 10px;
+  margin-bottom: var(--base);
+  max-width: 100%;
+  padding: 8px;
+}
+
+.block-translation-assistant__label {
+  color: var(--theme-elevation-700);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 0 4px;
+}
+
+.block-translation-assistant__tabs {
+  align-items: center;
+  background: var(--theme-input-bg);
+  border: 1px solid var(--theme-elevation-200);
+  border-radius: 999px;
+  display: inline-flex;
+  gap: 2px;
+  padding: 2px;
+}
+
+.block-translation-assistant__tab {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  border-radius: 999px;
+  color: var(--theme-text);
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: 600;
+  min-height: 30px;
+  padding: 0 12px;
+  transition:
+    background 140ms ease,
+    color 140ms ease;
+}
+
+.block-translation-assistant__tab[data-active='true'] {
+  background: var(--theme-text);
+  color: var(--theme-bg);
+}
+
+@media (max-width: 768px) {
+  .block-translation-assistant {
+    width: 100%;
+  }
+}

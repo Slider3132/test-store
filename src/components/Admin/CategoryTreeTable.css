@@ -1,0 +1,100 @@
+.category-tree-table {
+  border: 1px solid var(--theme-elevation-150);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.category-tree-table__table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.category-tree-table__table th,
+.category-tree-table__table td {
+  border-bottom: 1px solid var(--theme-elevation-100);
+  padding: 12px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.category-tree-table__table th {
+  background: var(--theme-elevation-50);
+  color: var(--theme-elevation-650);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.category-tree-table__row:last-child td {
+  border-bottom: 0;
+}
+
+.category-tree-table__title {
+  align-items: center;
+  color: var(--theme-text);
+  display: inline-flex;
+  gap: 8px;
+  min-height: 28px;
+  text-decoration: none;
+}
+
+.category-tree-table__title:hover {
+  text-decoration: underline;
+}
+
+.category-tree-table__toggle {
+  align-items: center;
+  background: var(--theme-elevation-100);
+  border: 1px solid var(--theme-elevation-150);
+  border-radius: 6px;
+  color: var(--theme-text);
+  cursor: pointer;
+  display: inline-flex;
+  height: 24px;
+  justify-content: center;
+  margin-right: 8px;
+  padding: 0;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    transform 160ms ease;
+  width: 24px;
+}
+
+.category-tree-table__toggle:hover {
+  background: var(--theme-elevation-150);
+}
+
+.category-tree-table__toggle[data-open='true'] {
+  transform: rotate(90deg);
+}
+
+.category-tree-table__spacer {
+  display: inline-block;
+  height: 24px;
+  margin-right: 8px;
+  width: 24px;
+}
+
+.category-tree-table__muted {
+  color: var(--theme-elevation-550);
+}
+
+.category-tree-table__badge {
+  background: var(--theme-elevation-100);
+  border: 1px solid var(--theme-elevation-150);
+  border-radius: 999px;
+  color: var(--theme-elevation-700);
+  display: inline-flex;
+  font-size: 12px;
+  line-height: 1;
+  padding: 5px 8px;
+}
+
+.category-tree-table__empty {
+  border: 1px solid var(--theme-elevation-150);
+  border-radius: 8px;
+  color: var(--theme-elevation-600);
+  padding: 24px;
+}

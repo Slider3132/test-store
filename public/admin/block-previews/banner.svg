@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" role="img" aria-label="Banner preview">
+  <rect width="480" height="320" fill="#f7f7f8"/>
+  <rect x="52" y="104" width="376" height="96" rx="18" fill="#111"/>
+  <circle cx="88" cy="152" r="16" fill="#fff"/>
+  <rect x="120" y="132" width="118" height="12" rx="6" fill="#fff"/>
+  <rect x="120" y="158" width="238" height="8" rx="4" fill="#d4d4d8"/>
+  <rect x="120" y="178" width="184" height="8" rx="4" fill="#a1a1aa"/>
+</svg>

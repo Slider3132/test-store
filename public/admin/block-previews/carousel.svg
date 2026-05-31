@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" role="img" aria-label="Carousel preview">
+  <rect width="480" height="320" fill="#f7f7f8"/>
+  <rect x="96" y="54" width="288" height="190" rx="24" fill="#111"/>
+  <rect x="124" y="82" width="132" height="104" rx="18" fill="#f4f4f5"/>
+  <rect x="280" y="106" width="62" height="12" rx="6" fill="#fff"/>
+  <rect x="280" y="134" width="82" height="8" rx="4" fill="#d4d4d8"/>
+  <rect x="280" y="154" width="62" height="8" rx="4" fill="#a1a1aa"/>
+  <circle cx="64" cy="149" r="18" fill="#d4d4d8"/>
+  <circle cx="416" cy="149" r="18" fill="#d4d4d8"/>
+  <circle cx="222" cy="270" r="5" fill="#111"/>
+  <circle cx="240" cy="270" r="5" fill="#a1a1aa"/>
+  <circle cx="258" cy="270" r="5" fill="#a1a1aa"/>
+</svg>

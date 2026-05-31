@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" role="img" aria-label="Featured products preview">
+  <rect width="480" height="320" fill="#f7f7f8"/>
+  <rect x="40" y="36" width="150" height="20" rx="10" fill="#111"/>
+  <rect x="40" y="76" width="118" height="158" rx="18" fill="#eceef1" stroke="#d4d4d8"/>
+  <rect x="181" y="76" width="118" height="158" rx="18" fill="#eceef1" stroke="#d4d4d8"/>
+  <rect x="322" y="76" width="118" height="158" rx="18" fill="#eceef1" stroke="#d4d4d8"/>
+  <path d="M87 111h24l22 86H65l22-86Z" fill="#111"/>
+  <rect x="219" y="112" width="42" height="72" rx="20" fill="#111"/>
+  <circle cx="380" cy="153" r="34" fill="#111"/>
+  <rect x="48" y="252" width="74" height="10" rx="5" fill="#111"/>
+  <rect x="188" y="252" width="74" height="10" rx="5" fill="#111"/>
+  <rect x="329" y="252" width="74" height="10" rx="5" fill="#111"/>
+</svg>

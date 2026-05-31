@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" role="img" aria-label="Category tiles preview">
+  <rect width="480" height="320" fill="#f7f7f8"/>
+  <rect x="38" y="42" width="180" height="26" rx="13" fill="#111"/>
+  <rect x="38" y="86" width="124" height="150" rx="16" fill="#111"/>
+  <rect x="178" y="86" width="124" height="150" rx="16" fill="#d9dde2"/>
+  <rect x="318" y="86" width="124" height="150" rx="16" fill="#eceef1"/>
+  <rect x="58" y="197" width="78" height="12" rx="6" fill="#fff"/>
+  <rect x="198" y="197" width="78" height="12" rx="6" fill="#111"/>
+  <rect x="338" y="197" width="78" height="12" rx="6" fill="#111"/>
+  <circle cx="116" cy="134" r="28" fill="#fff"/>
+  <circle cx="256" cy="134" r="28" fill="#111"/>
+  <circle cx="396" cy="134" r="28" fill="#111"/>
+</svg>

@@ -1,0 +1,41 @@
+services:
+  app:
+    build:
+      context: .
+      args:
+        NEXT_PUBLIC_SERVER_URL: ${NEXT_PUBLIC_SERVER_URL:-http://localhost:3000}
+        PAYLOAD_PUBLIC_SERVER_URL: ${PAYLOAD_PUBLIC_SERVER_URL:-http://localhost:3000}
+    depends_on:
+      postgres:
+        condition: service_healthy
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: postgres://postgres:postgres@postgres:5432/ecommerce-starter
+      DATABASE_SSL: 'false'
+      DATABASE_SSL_REJECT_UNAUTHORIZED: 'false'
+      NODE_ENV: production
+      PORT: 3000
+    ports:
+      - '3000:3000'
+    restart: unless-stopped
+
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: ecommerce-starter
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U postgres -d ecommerce-starter']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    ports:
+      - '5432:5432'
+    restart: unless-stopped
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+volumes:
+  postgres-data:
