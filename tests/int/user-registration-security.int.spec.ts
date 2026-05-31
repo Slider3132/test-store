@@ -32,4 +32,20 @@ describe('user registration security', () => {
 
     expect(value).toEqual(['customer'])
   })
+
+  it('bootstraps the first Payload admin user as owner through first-register', async () => {
+    const value = await ensureFirstUserIsAdmin({
+      operation: 'create',
+      req: {
+        payload: {
+          find: vi.fn(async () => ({ totalDocs: 0 })),
+        },
+        url: 'https://store.example.com/api/users/first-register',
+        user: undefined,
+      },
+      value: undefined,
+    } as any)
+
+    expect(value).toEqual(['owner'])
+  })
 })
